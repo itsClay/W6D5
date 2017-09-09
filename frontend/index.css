@@ -1,0 +1,36 @@
+.clock-container {
+  display: flex;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+  background-color: #F99;
+  border-radius: 10px;
+  width: 75%;
+  height: 350px;
+  font-family: sans-serif;
+  font-family: 'Libre Barcode 128 Text', cursive;
+  color:#F0EAD6;
+  background-image:url(https://images1.laweekly.com/imager/u/745xauto/7350775/2pac-all-eyez-on-me.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  /*background-attachment: fixed;*/
+}
+
+body {
+}
+
+.clock-container h1 {
+  font-size:52px;
+  float: left;
+  /*align-items: center;*/
+  /*margin: 0 auto;*/
+}
+
+.clock-container p {
+  font-size:52px;
+  display: block;
+  float: left;
+  margin: 0 0 0 20px;
+
+  /*justify-content: space-between;*/
+}
