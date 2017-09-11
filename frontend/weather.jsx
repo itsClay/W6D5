@@ -53,15 +53,18 @@ export default class Weather extends React.Component {
   }
 //  + `${this.state.weather.weather.icon}` + "
   iconUrl() {
+    if (this.state.icon === "") {
+      return  "";
+    }
     const url = `http://www.openweathermap.org/img/w/${this.state.icon}.png`;
     return (<img src={url}></img>);
     // iconUrl.bind(this)
   }
 
   render() {
-    console.log('*************************');
-    console.log(this.state);
-    let st = this.state;
+    // console.log('*************************');
+    // console.log(this.state);
+    const st = this.state;
     return(
       <div className="weather-container">
         <ul>
@@ -70,7 +73,6 @@ export default class Weather extends React.Component {
           <li>Icon: {this.iconUrl()}</li>
         </ul>
         <button onClick={this.fetchWeather.bind(this)}>Fetch dat weather doe</button>
-
       </div>
     );
   }

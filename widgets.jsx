@@ -2,7 +2,18 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Clock from './frontend/clock';
 import Weather from './frontend/weather';
+import AutoComplete from './frontend/autocomplete';
 
+const Names = [
+  'Fred',
+  'Moe',
+  'Larry',
+  'Curly',
+  'John',
+  'Sally',
+  'Jessica',
+  'Xander'
+];
 
 class Root extends React.Component {
   render() {
@@ -11,6 +22,7 @@ class Root extends React.Component {
         React is working
         <Clock/>
         <Weather/>
+        <AutoComplete names={Names}/>
       </div>
     );
   }
