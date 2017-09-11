@@ -8,6 +8,7 @@ export default class AutoComplete extends React.Component {
     };
     this.handleInput = this.handleInput.bind(this);
     this.findUser = this.findUser.bind(this);
+    this.assignName = this.assignName.bind(this);
   }
 
   handleInput(e) {
@@ -34,7 +35,11 @@ export default class AutoComplete extends React.Component {
     }
 
     return matches;
+  }
 
+  assignName(e) {
+    const name = e.currentTarget.innerText;
+    this.setState({input: name});
   }
 
 
@@ -49,7 +54,8 @@ export default class AutoComplete extends React.Component {
         placeholder = 'search...' />
       <ul>
         {
-          this.findUser().map((name, idx) => <li key={idx}>{name}</li>)
+          this.findUser().map((name, idx) => (<li key={idx}
+              onClick={this.assignName} >{name}</li> ))
         }
       </ul>
     </div>
